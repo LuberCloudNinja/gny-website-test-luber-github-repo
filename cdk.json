@@ -1,0 +1,52 @@
+{
+	"app": "python3 app.py",
+	"versionReporting": false,	
+	"watch": {
+		"include": [
+			"**"
+		],
+		"exclude": [
+			"README.md",
+			"cdk*.json",
+			"requirements*.txt",
+			"source.bat",
+			"**/__init__.py",
+			"python/__pycache__",
+			"tests"
+		]
+	},
+	"context": {
+		"@aws-cdk/aws-apigateway:usagePlanKeyOrderInsensitiveId": true,
+		"@aws-cdk/core:stackRelativeExports": true,
+		"@aws-cdk/aws-rds:lowercaseDbIdentifier": true,
+		"@aws-cdk/aws-lambda:recognizeVersionProps": true,
+		"@aws-cdk/aws-cloudfront:defaultSecurityPolicyTLSv1.2_2021": true,
+		"@aws-cdk-containers/ecs-service-extensions:enableDefaultLogDriver": true,
+		"@aws-cdk/aws-ec2:uniqueImdsv2TemplateName": true,
+		"@aws-cdk/core:target-partitions": [
+			"aws",
+			"aws-cn"
+		],
+		"envs": {
+			"env_name_type": "gny-website-prod",
+			"vpc_cidr": "172.28.3.0/24",
+      		"region": "us-east-1",
+      		"account": "142779814384",
+			"dbname": "prodrds",
+			"rds_instance_type": "t3.large",
+			"db_proxy_name": "gny-website-prod-rdsproxy",
+			"tgw_id": "tgw-0ab9a80f7f0791654",
+			"cfn_cache_cluster_instance_type":"cache.r6g.large",
+			"ami_id": "ami-06878d265978313ca",
+			"ssh_key_pair": "gny-web-instances-prod",
+			"instance_type": "m5.2xlarge",
+			"default_action":"allow",
+			"aws_managed_prefixlist_for_cloudfront": "pl-3b927c52",
+			"github_owner": "LuberCloudNinja",
+			"github_repo_name":"gny-website-test-luber-github-repo",
+			"github_branch_name": "master",
+			"secrets_manager_github_token_secret": "gny-github-secret-test",
+			"gny_website_bitbucket_oauth_token": "gny-website-bitbucket-oauth-token"
+		}
+	}
+}
