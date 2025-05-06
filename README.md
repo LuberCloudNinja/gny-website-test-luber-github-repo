@@ -43,7 +43,7 @@ Each stack has its own CI/CD flow, configuration, networking, and IAM.
 ---
 
 ## Technologies Used
-- **AWS CDK (TypeScript)**
+- **AWS CDK (Python)**
 - Amazon CloudFront, ALB, ECS Fargate, RDS, RDS Proxy, Memcached
 - GitHub, GitLab CI/CD
 - AWS CodePipeline, CodeBuild, CloudFormation
